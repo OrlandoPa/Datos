@@ -1,0 +1,22 @@
+<div class="max-duration-container">
+  <h2>Máxima Duración</h2>
+
+  <!-- Formulario para ingresar datos -->
+  <label for="year">Año:</label>
+  <input id="year" type="number" [(ngModel)]="year" />
+
+  <label for="platform">Plataforma:</label>
+  <input id="platform" type="text" [(ngModel)]="platform" />
+
+  <label for="tipo">Tipo (min o season):</label>
+  <input id="tipo" type="text" [(ngModel)]="tipo" />
+
+  <button (click)="fetchMaxDuration()">Consultar</button>
+
+  <!-- Mostrar resultados -->
+  <div *ngIf="result">
+    <h3>Resultado</h3>
+    <p><strong>Duración:</strong> {{ result.duration }}</p>
+    <p><strong>Título:</strong> {{ result.title }}</p>
+  </div>
+</div>
