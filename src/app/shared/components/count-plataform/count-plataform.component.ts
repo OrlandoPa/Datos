@@ -1,28 +1,26 @@
-import {Component, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 import { ApiService } from '../../../services/api.service';
-import * as console from 'node:console';
+import {FormsModule} from '@angular/forms';
+import {CommonModule} from '@angular/common';
 
 @Component({
   selector: 'app-count-platform',
-  templateUrl: './count-platform.component.html',
-  styleUrls: ['./count-platform.component.scss'],
+  imports: [CommonModule, FormsModule],
+  templateUrl: './count-plataform.component.html',
+  styleUrls: ['./count-plataform.component.scss'],
   standalone: true
 })
+
+
 export class CountPlatformComponent{
-  platform: string = 'netflix'; // Plataforma predeterminada
-  results: any[] = []; // Almacena los resultados de la API
+  platform: string = 'netflix';
+  result: any = null;
 
   constructor(private apiService: ApiService) {}
 
-  fetchCountPlatform(): void {
-    this.apiService.getCountPlatform(this.platform).subscribe(
-      (data) => {
-        this.results = data;
-      },
-      (error) => {
-        console.error('Error fetching data', error);
-      }
-    );
+  search() {
+    this.apiService.getCountPlatform(this.platform)
+      .subscribe(data => this.result = data);
   }
 
 }

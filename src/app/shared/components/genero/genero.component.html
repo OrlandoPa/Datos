@@ -1,0 +1,12 @@
+<div class="card">
+  <h3>Frecuencia por género</h3>
+  <div class="form-group">
+    <label>Género:</label>
+    <input type="text" [(ngModel)]="genre" placeholder="Ej: comedy">
+  </div>
+  <button (click)="search()">Buscar</button>
+  <div class="result" *ngIf="result">
+    <p>Plataforma: {{result.platform}}</p>
+    <p>Cantidad: {{result.Cantidad_repetidas}}</p>
+  </div>
+</div>

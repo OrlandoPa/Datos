@@ -1,22 +1,28 @@
-<div class="max-duration-container">
-  <h2>Máxima Duración</h2>
-
-  <!-- Formulario para ingresar datos -->
-  <label for="year">Año:</label>
-  <input id="year" type="number" [(ngModel)]="year" />
-
-  <label for="platform">Plataforma:</label>
-  <input id="platform" type="text" [(ngModel)]="platform" />
-
-  <label for="tipo">Tipo (min o season):</label>
-  <input id="tipo" type="text" [(ngModel)]="tipo" />
-
-  <button (click)="fetchMaxDuration()">Consultar</button>
-
-  <!-- Mostrar resultados -->
-  <div *ngIf="result">
-    <h3>Resultado</h3>
-    <p><strong>Duración:</strong> {{ result.duration }}</p>
-    <p><strong>Título:</strong> {{ result.title }}</p>
+<div class="card">
+  <h3>Máxima duración por tipo de film</h3>
+  <div class="form-group">
+    <label>Año:</label>
+    <input type="number" [(ngModel)]="year">
+  </div>
+  <div class="form-group">
+    <label>Plataforma:</label>
+    <select [(ngModel)]="platform">
+      <option value="netflix">Netflix</option>
+      <option value="hulu">Hulu</option>
+      <option value="amazon">Amazon</option>
+      <option value="disney">Disney+</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label>Tipo:</label>
+    <select [(ngModel)]="type">
+      <option value="min">Película</option>
+      <option value="season">Serie</option>
+    </select>
+  </div>
+  <button (click)="search()">Buscar</button>
+  <div class="result" *ngIf="result">
+    <p>Título: {{result.title}}</p>
+    <p>Duración: {{result.duration}}</p>
   </div>
 </div>

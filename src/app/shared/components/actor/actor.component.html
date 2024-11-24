@@ -1,5 +1,5 @@
 <div class="card">
-  <h3>Cantidad por plataforma</h3>
+  <h3>Actor más frecuente</h3>
   <div class="form-group">
     <label>Plataforma:</label>
     <select [(ngModel)]="platform">
@@ -9,10 +9,13 @@
       <option value="disney">Disney+</option>
     </select>
   </div>
+  <div class="form-group">
+    <label>Año:</label>
+    <input type="number" [(ngModel)]="year">
+  </div>
   <button (click)="search()">Buscar</button>
   <div class="result" *ngIf="result">
-    <div *ngFor="let item of result">
-      {{item.category}}: {{item.count}}
-    </div>
+    <p>Actor: {{result.cast}}</p>
+    <p>Apariciones: {{result.Cantidad_apariciones}}</p>
   </div>
 </div>

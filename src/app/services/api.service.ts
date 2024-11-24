@@ -7,7 +7,7 @@ import {Observable} from 'rxjs';
 })
 export class ApiService {
 
-  private apiUrl = 'http://localhost:8000'; // URL de tu API FastAPI
+  private apiUrl = 'http://127.0.0.1:8000'; // URL de tu API FastAPI
 
   constructor(private http: HttpClient) {}
 
