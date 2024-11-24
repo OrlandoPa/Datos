@@ -1,0 +1,75 @@
+/* Contenedor principal */
+.d-flex {
+  display: flex;
+  align-items: center; /* Centra verticalmente las columnas */
+  justify-content: space-between; /* Espacio balanceado entre texto e imagen */
+  padding: 20px; /* Relleno interno del marco */
+  gap: 30px; /* Espacio entre las columnas */
+}
+
+/* Columna de texto */
+.text-start {
+  max-width: 50%; /* Limita el ancho del texto al 50% */
+  text-align: left; /* Alinea el texto a la izquierda */
+}
+
+.text-start h5 {
+  font-size: 1.5rem; /* Tamaño del título */
+  font-weight: bold; /* Resalta el título */
+  margin-bottom: 15px; /* Espacio entre el título y el botón */
+}
+
+.text-start a {
+  display: inline-block; /* Evita que el botón ocupe todo el ancho */
+  margin-top: 10px; /* Espacio entre el título y el botón */
+}
+
+/* Columna de imagen */
+.image-container {
+  max-width: 50%; /* Limita el ancho de la imagen al 50% */
+  display: flex; /* Activa Flexbox */
+  justify-content: center; /* Centra la imagen horizontalmente */
+  align-items: center; /* Centra la imagen verticalmente */
+}
+
+.image-container img {
+  max-height: 150px; /* Altura máxima */
+  max-width: 100%; /* Controla el ancho máximo */
+  object-fit: contain; /* Mantiene las proporciones */
+}
+
+/* Marco */
+.border {
+  border-radius: 15px; /* Bordes redondeados */
+  padding: 2rem; /* Ajusta el relleno interno */
+}
+
+/* Contenedor */
+.container {
+  max-width: 600px; /* Limita el ancho total del contenedor */
+  margin: 0 auto; /* Centra el contenedor */
+  padding: 0 20px; /* Añade relleno horizontal */
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+  .d-flex {
+    flex-direction: column; /* Cambia a diseño vertical en pantallas pequeñas */
+    gap: 20px; /* Espacio entre columnas */
+    text-align: center; /* Centra el texto */
+  }
+
+  .text-start {
+    max-width: 100%; /* Permite que el texto use todo el ancho */
+    text-align: center; /* Centra el texto */
+  }
+
+  .image-container {
+    max-width: 100%; /* Permite que la imagen use todo el ancho */
+    margin-top: 15px; /* Espacio adicional sobre la imagen */
+  }
+
+  .image-container img {
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+  }
+}

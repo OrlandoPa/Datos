@@ -1,13 +1,60 @@
 <div class="container">
-  <nav>
-    <ul>
-      <li><a [routerLink]="'/max-duration'" >Máxima Duración</a></li>
-      <li><a [routerLink]="'/count'">Cantidad por Plataforma</a></li>
-      <li><a [routerLink]="'/genero'">Género más Repetido</a></li>
-      <li><a [routerLink]="'/actores'">Actor más Repetido</a></li>
-    </ul>
-  </nav>
+  <!-- Max Duration -->
+  <div class="d-flex align-items-center justify-content-between border p-4 shadow-sm bg-light rounded">
+    <!-- Columna de texto -->
+    <div class="text-start">
+      <h5 class="fw-bold mb-3">Máxima duración por tipo de cinta</h5>
+      <a [routerLink]="'/max-duration'" class="btn btn-success">Haga click aquí</a>
+    </div>
 
-  <hr>
+    <!-- Columna de imagen -->
+    <div class="image-container">
+      <img src="assets/images/duration.jpg" alt="Máxima duración" class="img-fluid">
+    </div>
+  </div>
+
+  <!-- Count platform -->
+  <div class="d-flex align-items-center justify-content-between border p-4 shadow-sm bg-light rounded">
+    <!-- Columna de imagen -->
+    <div class="image-container">
+      <img src="assets/images/count.jpeg" alt="Cantidad x plataforma" class="img-fluid">
+    </div>
+
+    <div class="text-start">
+      <h5 class="fw-bold mb-3">Total de peliculas y series por plataforma</h5>
+      <a [routerLink]="'/count'" class="btn btn-success">Haga click aquí</a>
+    </div>
+  </div>
+
+  <!-- Gender Frequency -->
+  <div class="d-flex align-items-center justify-content-between border p-4 shadow-sm bg-light rounded">
+    <!-- Columna de texto -->
+    <div class="text-start">
+      <h5 class="fw-bold mb-3">Frecuencia por género</h5>
+      <a [routerLink]="'/genero'" class="btn btn-success">Haga click aquí</a>
+    </div>
+
+    <!-- Columna de imagen -->
+    <div class="image-container">
+      <img src="assets/images/genero.png" alt="Frecuencia Género" class="img-fluid">
+    </div>
+  </div>
+
+  <!-- Actor appearances -->
+  <div class="d-flex align-items-center justify-content-between border p-4 shadow-sm bg-light rounded">
+    <!-- Columna de imagen -->
+    <div class="image-container">
+      <img src="assets/images/actor.png" alt="Actor aparación" class="img-fluid">
+    </div>
+
+    <div class="text-start">
+      <h5 class="fw-bold mb-3">Actor con más apariciones por plataforma y año</h5>
+      <a [routerLink]="'/actores'" class="btn btn-success">Haga click aquí</a>
+    </div>
+  </div>
 
 </div>
+
+
+
+
